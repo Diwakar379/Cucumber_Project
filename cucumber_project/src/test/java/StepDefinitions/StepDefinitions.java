@@ -5,16 +5,15 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 public class StepDefinitions {
 
     WebDriver driver;
 
     @Given("Open the browser")
     public void open_the_browser() {
-        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
-        driver = new FirefoxDriver();
+        // System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver");
+        driver = new ChromeDriver();
         System.out.println("Browser is opened");
     }
 
